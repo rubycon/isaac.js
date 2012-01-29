@@ -183,23 +183,28 @@ var isaac = (function(){
     gnt = 256;  /* prepare to use the first set of results */;
   }
 
-  /* public: isaac generator */
-  function prng(){
+  /* public: isaac generator, n = number of run */
+  function prng(n){
     var i, x, y;
 
-    cnt = add(cnt, 1);
-    brs = add(brs, cnt);
+    n = (n && typeof(n) === 'number')
+      ? Math.abs(Math.floor(n)) : 1;
 
-    for(i = 0; i < 256; i++) {
-      switch(i & 3) {
-        case 0: acc ^= acc <<  13; break;
-        case 1: acc ^= acc >>>  6; break;
-        case 2: acc ^= acc <<   2; break;
-        case 3: acc ^= acc >>> 16; break;
+    while(n--) {
+      cnt = add(cnt,   1);
+      brs = add(brs, cnt);
+
+      for(i = 0; i < 256; i++) {
+        switch(i & 3) {
+          case 0: acc ^= acc <<  13; break;
+          case 1: acc ^= acc >>>  6; break;
+          case 2: acc ^= acc <<   2; break;
+          case 3: acc ^= acc >>> 16; break;
+        }
+        acc        = add(m[(i +  128) & 0xff], acc); x = m[i];
+        m[i] =   y = add(m[(x >>>  2) & 0xff], add(acc, brs));
+        r[i] = brs = add(m[(y >>> 10) & 0xff], x);
       }
-      acc        = add(m[(i +  128) & 0xff], acc); x = m[i];
-      m[i] =   y = add(m[(x >>>  2) & 0xff], add(acc, brs));
-      r[i] = brs = add(m[(y >>> 10) & 0xff], x);
     }
   }
 
