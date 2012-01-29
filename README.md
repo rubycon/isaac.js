@@ -10,8 +10,7 @@ Include isaac.js into your html file: `<script src="isaac.js"></script>`. Then j
 
 `var random_number = isaac.random();`
 
-If you want a little more control over the PRNG you can reset isaac (all internals to zero) using `isaac.reset()` or use a new seed using `isaac.seed(s)` (*s* can be a string, a number or an array of number). You can also run the PRNG an arbitrary number of time before querying a new random output using `isaac.prng(n)`, where *n* (optional) is the number of run.
-`isaac.rand()` allow you to get a random 32-bit integer between -2147483648 (0x00000000) and 2147483647 (0xffffffff).
+If you want a little more control over the PRNG you can reset isaac (all internals to zero) using `isaac.reset()` or use a new seed using `isaac.seed(s)` (*s* can be a string, a number or an array of number). You can also run the PRNG an arbitrary number of time before querying a new random output using `isaac.prng(n)`, where *n* (optional) is the number of run. `isaac.rand()` allow you to get a random 32-bit integer between -2147483648 (0x00000000) and 2147483647 (0xFFFFFFFF).
 
 ##Licence
 ###isaac.js is released under the [MIT Licence](http://www.opensource.org/licenses/MIT):
