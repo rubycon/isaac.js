@@ -1,17 +1,17 @@
 # isaac.js
-*isaac.js* is a javascript implementation of [ISAAC](http://www.burtleburtle.net/bob/rand/isaac.html).
+*isaac.js* is a JavaScript implementation of the [ISAAC](http://www.burtleburtle.net/bob/rand/isaac.html) random number generator.
 
 ISAAC is a [CSPRNG](http://en.wikipedia.org/wiki/CSPRNG) designed by [Robert J. Jenkins Jr.](http://burtleburtle.net/bob/) in 1996 and based on RC4. It is designed to be fast and secure.
 
-*isaac.js* is fully compatible with other *32-bit integer arithmetic* implementations of ISAAC and can be used as a good alternative to the default javascript `Math.random()` function.
+*isaac.js* is fully compatible with the other *32-bit integer arithmetic* implementations of ISAAC and can be used as a good alternative to the default javascript `Math.random()` function.
 
-##Usage
-Include isaac.js into your html file: `<script src="isaac.js"></script>`.
-Then just call `isaac.random()` to get a random real number between 0 and 1 :
+##Use
+Include isaac.js into your html file: `<script src="isaac.js"></script>`. Then just call `isaac.random()` to get a random real number between 0.0 and 1.0 :
 
 `var random_number = isaac.random();`
 
-If you want a little more control over the PRNG you can reset isaac (all internals to zero) using `isaac.reset()` or use a new seed using `isaac.seed(s)` (*s* can be a string, a number or an array of number). You can also run the prng an arbitrary number of time before querying a new random output using `isaac.prng()`.
+If you want a little more control over the PRNG you can reset isaac (all internals to zero) using `isaac.reset()` or use a new seed using `isaac.seed(s)` (*s* can be a string, a number or an array of number). You can also run the PRNG an arbitrary number of time before querying a new random output using `isaac.prng(n)`, where *n* (optional) is the number of run.
+`isaac.rand()` allow you to get a random 32-bit integer between -2147483648 (0x00000000) and 2147483647 (0xffffffff).
 
 ##Licence
 ###isaac.js is released under the [MIT Licence](http://www.opensource.org/licenses/MIT):
