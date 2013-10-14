@@ -1,0 +1,16 @@
+{
+  "author": "Yves-Marie K. Rinquin, ported to Node by Stefano Balocco",
+  "name": "isaac.js",
+  "description": "ISAAC is a CSPRNG designed by Robert J. Jenkins Jr. in 1996 and based on RC4. It is designed to be fast and secure.",
+  "version": "0.1",
+  "repository": {
+    "url": "https://github.com/StefanoBalocco/isaac.js.git"
+  },
+  "isaac": "./isaac.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
