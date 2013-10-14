@@ -1,4 +1,4 @@
-# isaac.js
+# isaac.js - NodeJS compatibility version
 *isaac.js* is a JavaScript implementation of the [ISAAC](http://www.burtleburtle.net/bob/rand/isaac.html) random number generator.
 
 ISAAC is a [CSPRNG](http://en.wikipedia.org/wiki/CSPRNG) designed by [Robert J. Jenkins Jr.](http://burtleburtle.net/bob/) in 1996 and based on RC4. It is designed to be fast and secure.
