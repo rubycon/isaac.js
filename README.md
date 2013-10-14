@@ -7,10 +7,10 @@ ISAAC is a [CSPRNG](http://en.wikipedia.org/wiki/CSPRNG) designed by [Robert J. 
 
 ##Use
 `
-npm install isaac.js
+npm install isaac
 `
 
-`var isaac = require( 'isaac.js' );`
+`var isaac = require( 'isaac' );`
 
 Then just call `isaac.random()` to get a random real number between 0.0 and 1.0 :
 `var random_number = isaac.random( );`
