@@ -236,4 +236,4 @@ isaac.random = function() {
   return 0.5 + this.rand() * 2.3283064365386963e-10; // 2^-32
 }
 
-module.exports = isaac;
+( "undefined" !== ( typeof( module ) ) ) && module.exports && ( module.exports = isaac );
