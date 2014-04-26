@@ -2,7 +2,7 @@
 	"author": "Yves-Marie K. Rinquin",
 	"name": "isaac",
 	"description": "ISAAC is a CSPRNG designed by Robert J. Jenkins Jr. in 1996 and based on RC4. It is designed to be fast and secure.",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"repository":
 	{
 		"type": "git",

@@ -231,7 +231,7 @@ var isaac = (function(){
     'seed':  seed,
     'prng':  prng,
     'rand':  rand,
-    'ranodm': random,
+    'random': random,
     'internals': internals
   };
 })(); /* declare and execute */
